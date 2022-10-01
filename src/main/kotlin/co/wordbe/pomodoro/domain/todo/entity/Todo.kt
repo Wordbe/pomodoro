@@ -9,5 +9,4 @@ data class Todo(
     val id: Long? = null,
     val title: String,
     val description: String,
-) {
-}
+)
