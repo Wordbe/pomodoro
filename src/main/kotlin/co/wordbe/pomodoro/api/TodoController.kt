@@ -1,6 +1,7 @@
 package co.wordbe.pomodoro.api
 
 import co.wordbe.pomodoro.api.dto.TodoRequest
+import co.wordbe.pomodoro.api.dto.TodoResponse
 import co.wordbe.pomodoro.service.TodoService
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -12,7 +13,6 @@ class TodoController(
 ) {
 
     @PostMapping("/api/v1/todos")
-    suspend fun create(@RequestBody todoRequest: TodoRequest) {
-        todoService.create(todoRequest)
-    }
+    suspend fun create(@RequestBody todoRequest: TodoRequest) =
+        TodoResponse(todoService.create(todoRequest))
 }

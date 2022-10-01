@@ -13,3 +13,19 @@ data class TodoRequest(
         )
     }
 }
+
+data class TodoResponse(
+    val id: Long,
+    val title: String,
+    val description: String
+) {
+    companion object {
+        operator fun invoke(todo: Todo): TodoResponse {
+            return TodoResponse(
+                id = todo.id!!,
+                title = todo.title,
+                description = todo.description
+            )
+        }
+    }
+}
