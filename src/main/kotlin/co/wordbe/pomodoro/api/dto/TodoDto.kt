@@ -25,3 +25,7 @@ data class TodoResponse (
         description = todo.description
     )
 }
+
+data class TodoGatheringResponse(
+    val titles: List<String>
+)

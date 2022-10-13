@@ -1,0 +1,13 @@
+###
+# @no-log
+POST http://localhost:8080/api/v1/todos
+Content-Type: application/json
+
+{
+  "title": "블로그 작성하기",
+  "description": "1) 노트북을 편다. 2) 글을 작성한다."
+}
+
+###
+# @no-log
+GET http://localhost:8080/api/v1/todo/1/gather
